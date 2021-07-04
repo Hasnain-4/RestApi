@@ -1,6 +1,6 @@
 from django.urls import path
-from api.views import ArticleList,ArticleDetail
+from api.views import ProjectList,ProjectDetail
 urlpatterns = [
-    path('articles/', ArticleList.as_view()),
-    path('articles/<int:pk>/', ArticleDetail.as_view()),
+    path('prjects/', ProjectList.as_view()),
+    path('delete-prjects/<int:pk>/', ProjectDetail.as_view()),
 ]

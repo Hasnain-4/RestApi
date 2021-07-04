@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from .models import Article
-from .serializers import ArticleSerializer
+from .models import Project
+from .serializers import ProjectSerializer
 from rest_framework import generics
 
 
-class ArticleList(generics.ListCreateAPIView):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+class ProjectList(generics.ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
 
 
-class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
